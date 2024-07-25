@@ -19,11 +19,6 @@ const pool = new Pool({
 
 
 
-app.get("/", (req, res) => {
-  res.status(200).json({ status: "success", message: "Health check passed" });
-});
-
-
 // GET
 app.get("/videos", async (req, res) => {
   try {

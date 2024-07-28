@@ -3,7 +3,11 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 const cors = require('cors'); 
-app.use(cors()); 
+app.use(cors({
+  origin: 'https://full-stack-project-assessment-1.onrender.com',
+  methods: 'GET,POST,DELETE',
+  allowedHeaders: 'Content-Type'
+}));
 app.use(express.json()); 
 require('dotenv').config();
 const { Pool } = require('pg');

@@ -27,7 +27,7 @@ const AddVideo = ({ addVideo }) => {
       })
       .then((data) => {
         console.log('New video added with ID:', data.id);
-        addVideo({ ...newVideo, id: data.id }); // Update UI with new video
+        addVideo({ ...newVideo, id: data.id }); 
         setTitle('');
         setUrl('');
       })
